@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="com.cordova.plugin.AndroidAudioControls" version="1.0.0">
+    <name>AndroidAudioControls</name>
+    <js-module src="www/AndroidAudioControls.js">
+        <clobbers target="AndroidAudioControls" />
+    </js-module>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AndroidAudioControls">
+                <param name="android-package" value="com.AndroidAudioControls" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/AndroidAudioControls.java" target-dir="src/com/AndroidAudioControls" />
+    </platform>
+</plugin>
